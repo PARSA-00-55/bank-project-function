@@ -1,14 +1,17 @@
 document.getElementById('btn-withdraw').addEventListener('click', function(){
-    const inputValue = getInputFeildValueById('withdraw-field');
+    const inputValue = getInputFeildValueById('withdraw-field');//input feild value
 
+    //if the input value is NaN
     if(isNaN(inputValue)){
         alert('Type a amount');
         return;
     }
 
-    const previousElement =  getElementValueById('withdraw-total');
-    const previousTotalValue = getElementValueById('balance-total');
+    const previousElement =  getElementValueById('withdraw-total');//withdraw element value
+    const previousTotalValue = getElementValueById('balance-total');//total amount value
 
+
+    //if input amount is grater than the previous amount
     if(inputValue > previousTotalValue){
         alert(`you don't have that much money`);
         return;

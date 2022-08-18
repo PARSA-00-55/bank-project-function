@@ -1,13 +1,15 @@
+//button event handler
 document.getElementById('btn-deposit').addEventListener('click', function(){
-    const inputValue = getInputFeildValueById('deposit-feild');
+    const inputValue = getInputFeildValueById('deposit-feild');//input feild value
     
+    // if the value is NaN 
     if(isNaN(inputValue)){
         alert('Type a amount');
         return;
     }
     
-    const elementValue = getElementValueById('deposit-total');
-    const totalElementvalue = getElementValueById('balance-total');
+    const elementValue = getElementValueById('deposit-total');//deposit element vlaue
+    const totalElementvalue = getElementValueById('balance-total');//total amount value
     
     //calculate deposit element
     const newDepositTotal = inputValue + elementValue;
